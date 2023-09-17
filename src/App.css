@@ -1,0 +1,10 @@
+body{
+    background: rgb(3, 0, 31);
+    color: white;
+    font-family: "Poppins";
+    font: "Poppins";
+}
+.App{
+    min-height: 100vh;
+    display: flex;
+}
