@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
 import "./Movie.css";
 import Search from "../assets/search-interface-symbol.png";
@@ -17,20 +17,6 @@ export default function Home() {
   const apiKey = import.meta.env.REACT_APP_API_KEY;
   let url3 = `https://api.themoviedb.org/3/search/movie?query=${keywords}&api_key=254781a1c046226f8871f5770c1e43fa`;
   let url2 = "https://api.themoviedb.org/3/trending/all/day?language=en-US&api_key=254781a1c046226f8871f5770c1e43fa"
-
-  // const handleSearch = async () => {
-  //   try{   
-  //     const chatres = await axios.request(options);
-  //     const res = await fetch(url3);
-  //     const data = await res.json();
-  //     setMovies(data.results);
-  //     console.log(movies);
-  //     console.log(chatres.data)
-  //   }catch (error){
-  //      console.log(error)
-  //   }
- 
-  // };
 
 const handleSearch = async () => {
 
@@ -160,28 +146,6 @@ try {
             </div>
           </div>
         </div>
-
-        {/* <div className="Movie-sidebar-movie-box">
-        <div className="Movie-sidebar-movies" style={{background: `url(${dinosaur})no-repeat center center/cover `,}}>
-                <div className="year">
-                <SkeletonTheme baseColor="rgb(189, 184, 184)" highlightColor="rgb(129, 126, 126)">
-                  <Skeleton />
-                  </SkeletonTheme>
-                  </div>
-                <div className="empty-div">
-                <SkeletonTheme baseColor="rgb(189, 184, 184)" highlightColor="rgb(129, 126, 126)">
-                  <Skeleton height={180} />
-                  </SkeletonTheme>
-                  </div>
-                <div className="movieInfo">
-                  <span>
-                  <SkeletonTheme baseColor="rgb(189, 184, 184)" highlightColor="rgb(129, 126, 126)">
-                    {firstMovietitle || <Skeleton />}
-                    </SkeletonTheme>
-                    </span>
-                </div>
-              </div>
-        </div> */}
 
         {movies?.length > 0 ? (
           <div className="Movie-sidebar-movie-box">
