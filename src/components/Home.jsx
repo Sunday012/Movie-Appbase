@@ -39,7 +39,6 @@ try {
 	const chatRes = await axios.request(options);
   const res = await fetch(url3);
   const data = await res.json();
-  // const botData = await chatRes.json();
   setMovies(data.results);
   setMovieBief(chatRes.data.data.conversation.output)
   console.log(movies);
